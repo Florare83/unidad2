@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="stylesheet" href="css/app.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<section class="page-header">
+        <div>
+            <span class="seccion-badge">Club de Juegos de Mesa</span>
+            <h1>EL RINCON DE HERMES</h1>
+            <h2>Ludoteca - Juegos Modernos</h2>
+            <p>TP4 Ej2 - Sistema de filtrado de productos</p>
+        </div>
+    </section>
+
+    <main class="app-container">
+
+        <!-- Panel de filtros -->
+        <aside class="filtros-panel">
+            <h3 class="filtros-titulo">Filtros</h3>
+
+            <!-- Búsqueda -->
+            <div class="filtro-grupo">
+                <label for="busqueda">🔍 Buscar por nombre</label>
+                <input type="text" id="busqueda" class="filtro-input" placeholder="Escribí para buscar un juego">
+            </div>
+
+            <!-- Categoría -->
+            <div class="filtro-grupo">
+                <label for="categoria">📂 Categoría</label>
+                <select id="categoria" class="filtro-input">
+                    <option value="todas">Todas</option>
+                    <option value="Infantil">Infantil</option>
+                    <option value="Familiar">Familiar</option>
+                    <option value="Experto">Experto</option>
+                </select>
+            </div>
+
+            <!-- Precio -->
+            <div class="filtro-grupo">
+                <label for="precio">💰 Precio máximo: $<span id="precio-valor">115000</span></label>
+                <input type="range" id="precio" class="filtro-range" min="0" max="115000" value="115000">
+            </div>
+
+            <!-- Stock -->
+            <div class="filtro-grupo filtro-check-group">
+                <label for="stock">📦 Solo en stock</label>
+                <input type="checkbox" id="stock" class="filtro-checkbox">
+            </div>
+
+            <!-- Contador -->
+            <div class="filtro-resultado">
+                <span id="contador-productos">8 productos</span>
+            </div>
+
+            <!-- Reset -->
+            <button class="btn-reset" id="btn-reset">Limpiar filtros</button>
+        </aside>
+
+        <!-- Grilla de productos -->
+        <section class="productos-area">
+            <div id="productos-lista" class="productos-grid"></div>
+            <div id="productos-vacio" class="estado-vacio" style="display:none;">
+                <span class="estado-emoji">🔍</span>
+                <p>No se encontraron juegos con esos filtros.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p class="footer-titulo">Contacto</p>
+    <div class="footer-links">
+        <a href="https://www.instagram.com/elrincondehermes/"
+        target="_blank">
+        📸 Instagram
+        </a>
+
+        <a href="https://elrincondehermes.com/"
+        target="_blank">
+        🌐 Página Web
+        </a>
+     </div>
+
+</footer>
+
+    <script src="js/productos.js"></script>
+</body>
+</html>
