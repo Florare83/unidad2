@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+    <link rel="stylesheet" href="css/app.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <section class="page-header">
+      <div>
+            <h1>RAZAS DE GATOS</h1>
+            <p>TP4 - Ej4 Consumir una API pública con fetch - Ej5 Buscador dinámico con API</p>
+       </div>
+    </section>
+
+    <main>
+
+         <!-- ═══════════════════════════════════════════════════════ -->
+        <!-- BUSCADOR + RESULTADOS                                  -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <section class="seccion seccion-alt" id="demo">
+            <div class="api-demo-container">
+                <!-- Buscador -->
+                <div class="buscador-container">
+                    <div class="buscador-icon">🔍</div>
+                    <input type="text" id="busqueda-api" class="buscador-input" placeholder="Buscar razas de gatos...">
+                    <span class="buscador-hint" id="buscador-hint">Escribí al menos 3 caracteres</span>
+                </div>
+
+                <!-- Estado actual -->
+                <div id="api-estado" class="api-estado"></div>
+
+                <!-- Resultados -->
+                <div id="api-resultados" class="api-resultados-grid"></div>
+
+                <!-- Vacío -->
+                <div id="api-vacio" class="estado-vacio" style="display:none;">
+                    <span class="estado-emoji">🔍</span>
+                    <p>No se encontraron resultados.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <p class="footer-titulo">Areco Lidia Florencia</p>
+    
+  </footer>
+      <script src="js/api.js"></script>
+</body>
+</html>
