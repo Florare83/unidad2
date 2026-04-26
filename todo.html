@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do</title>
+    <link rel="stylesheet" href="css/app.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+        <section class="page-header">
+        <div >
+            <h1>TO - DO</h1>
+            <p>TP4 Ej3 - Lista de tareas interactiva (To-Do App)</p>
+        </div>
+    </section>
+
+    <main class="todo-page">
+        <div class="todo-app">
+            <div class="todo-header">
+                <h2>Mis Tareas</h2>
+                <span class="todo-contador" id="contador">0 pendientes</span>
+            </div>
+
+            <form id="form-tarea" class="todo-form">
+                <input type="text" id="input-tarea" class="todo-input" placeholder="¿Qué tenés que hacer?" required>
+                <button type="submit" class="todo-btn-agregar">+ Agregar</button>
+            </form>
+
+            <!-- Filtros de tareas -->
+            <div class="todo-filtros">
+                <button class="todo-filtro-btn activo" data-filtro="todas">Todas</button>
+                <button class="todo-filtro-btn" data-filtro="pendientes">Pendientes</button>
+                <button class="todo-filtro-btn" data-filtro="completadas">Completadas</button>
+            </div>
+
+            <ul id="lista-tareas" class="todo-lista"></ul>
+
+            <div class="todo-vacio" id="todo-vacio">
+                <span class="estado-emoji">📝</span>
+                <p>No hay tareas. ¡Agregá una arriba!</p>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p class="footer-titulo">Areco Lidia Florencia</p>
+    
+  </footer>
+    <script src="js/todo.js"></script>
+</body>
+</html>
